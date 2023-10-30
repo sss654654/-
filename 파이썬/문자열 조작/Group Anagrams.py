@@ -3,7 +3,6 @@
 # https://www.youtube.com/watch?v=3YqPKLZF_WU
 
 # 내가 푼거
-
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         
@@ -11,7 +10,7 @@ class Solution:
         for k,v in enumerate(strs):
             anagrams.append([''.join(sorted(v)),k])
         anagrams.sort(key = lambda x : x[0])
-
+        # == sorted(anagram, key=lambda x: x[0])
         dic = {}
         #print(anagrams)
         for anagram in anagrams:
@@ -38,7 +37,6 @@ class Solution:
 # ''.join(리스트)
 # ''.join(리스트)를 이용하면 매개변수로 들어온 ['a', 'b', 'c'] 
 # 를 'abc'의 문자열로 합쳐서 반환
-
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         
@@ -46,6 +44,7 @@ class Solution:
 
         for word in strs:
             anagrams[''.join(sorted(word))].append(word)
+        # dictionary
         # anagrams[aet] = ate, eat, tea
 
         return list(anagrams.values())
