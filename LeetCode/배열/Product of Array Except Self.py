@@ -24,17 +24,19 @@ class Solution:
 # 자신을 제외한 배열의 곱
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
+
         out = []
-        p = 1
+        p = 1 # 포인터의 첫번째는 왼쪽에 있는 값이 없으므로
         for i in range(len(nums)):
-            out.append(p)
-            p *= nums[i] # p는 다음 i 이전 까지의 왼쪽의 모든 수를 곱한 값
+            out.append(p) # p는 포인터 좌측의 곱
+            p *= nums[i]
         
-        p = 1
+        print(out)
+        p = 1 # 포인터의 마지막은 오른쪽에 있는 값이 없으므로
         for i in range(len(nums)-1, -1, -1):
-            out[i] *= p
-            p *= nums[i] # p는 다음 i 이전 까지의 오른쪽의 모든 수를 곱한 값
-        
+            out[i] *= p # p는 포인터 우측의 곱
+            p *= nums[i]
+
         return out
             
             
