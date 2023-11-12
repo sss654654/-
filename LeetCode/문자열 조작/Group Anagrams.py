@@ -43,6 +43,7 @@ class Solution:
         anagrams = collections.defaultdict(list)
 
         for word in strs:
+             # join => 문자열 리스트를 str로 변경
             anagrams[''.join(sorted(word))].append(word)
         # dictionary
         # anagrams[aet] = ate, eat, tea
