@@ -2,8 +2,6 @@
 # https://www.youtube.com/watch?v=H1ov8gTjuvk
 
 # 자료형 변환
-
-# Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -39,3 +37,4 @@ class Solution:
             prev = node
         
         return node
+

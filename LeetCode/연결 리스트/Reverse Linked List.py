@@ -16,8 +16,9 @@ class Solution:
             # nex= node.next로 2,3,4,5가 담김
 
             # node는 1,2,3,4,5 에서 부터
-            # 처음 node.next = None을 받고 node = 1이됨
-            # node = 1은 reverse의 prev로 전달되며
+            # nex = node.next(2,3,4,5)
+            # node.next = None => node = 1>None
+            # node = 1은 reverse의 prev로 전달되며(reverse(nex,node))
             # reverse(2>3>4>5, 1>None)
 
             # 이제 node = 2>3>4>5가 되고 
